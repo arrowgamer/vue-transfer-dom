@@ -10,7 +10,7 @@
 }(this, function (Vue, options) {
 
 var name = (options && options.name) || 'transferDom'
-name = Vue.util.hyphenate(name)
+name = name.replace(/([a-zA-Z])([A-Z])/g, '$1-$2').toLowerCase();
 
 var FragmentFactory = Vue.FragmentFactory
 var remove = Vue.util.remove
